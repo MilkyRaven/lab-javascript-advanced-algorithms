@@ -6,14 +6,30 @@ class Stack {
 
   canPush() {
     // ... your code goes here
+    if (!this.stackControl[0]) {
+      return true
+    } else {
+      return false
+    }
   }
 
   isEmpty() {
     // ... your code goes here
+    if (!this.stackControl[0]) {
+      return true
+    } else {
+      return false
+    }
   }
 
   push(item) {
     // ... your code goes here
+    if (this.isEmpty() === false) {
+      throw Error('STACK_OVERFLOW');
+    } else {
+    this.stackControl.push(item);
+    return this.stackControl;
+    }
   }
 
   pop() {
